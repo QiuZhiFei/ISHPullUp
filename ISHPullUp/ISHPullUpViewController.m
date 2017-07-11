@@ -364,8 +364,7 @@ const CGFloat ISHPullUpViewControllerDefaultTopMargin = 20.0;
     if (!self.sizingDelegate || !self.bottomViewController) {
         return maximumAvailableHeight;
     }
-
-    return MIN(maximumAvailableHeight, [self.sizingDelegate pullUpViewController:self maximumHeightForBottomViewController:self.bottomViewController maximumAvailableHeight:maximumAvailableHeight]);
+  return [self.sizingDelegate pullUpViewController:self maximumHeightForBottomViewController:self.bottomViewController maximumAvailableHeight:maximumAvailableHeight];
 }
 
 - (void)updateCachedHeightsWithSize:(CGSize)size  {
